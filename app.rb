@@ -1,4 +1,6 @@
 require 'sinatra/base'
+set :show_exceptions, :after_handler
+
 
 class App < Sinatra::Base
   
@@ -12,9 +14,8 @@ class App < Sinatra::Base
     @pg = params["pg"]
     @sg = params["sg"]
     @sf = params["sf"]
-    @pf = params["pg"]
+    @pf = params["pf"]
     @center = params["c"]
     erb :team
   end
-
 end
